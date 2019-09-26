@@ -14,6 +14,7 @@ Docker (development) image with everything set up to work with `tomolab` and `Ni
 ## Quick start
 - Clone this repository
 - Make `run.sh` executable
+- Make all scripts in folder `scripts/` executable
 - From within the main folder, fire up a terminal and execute `sh run.sh` or just `./run.sh`
 - Hopefully, the image will be built and a (self destructive) container will start right away.
 - The process will start a `jupyter` server, which you may access from a browser of your host computer at:
@@ -23,4 +24,4 @@ Docker (development) image with everything set up to work with `tomolab` and `Ni
 
 
 - Be sure that no other process is blocking port 8888
-- To stop the notebook server and destry the container (the image will not be destryed) just press `Ctrl+C` from within the terminal window
+- To stop the notebook server and destroy the container (the image will not be destroyed) just press `Ctrl+C` from within the terminal window

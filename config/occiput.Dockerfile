@@ -96,7 +96,7 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
     && conda config --system --prepend channels conda-forge  \
     && conda config --system --set auto_update_conda false  \
     && conda config --system --set show_channel_urls true  \
-    && conda update -yn base conda \
+    && conda update -yn base -c defaults conda \
     && conda update -yn base --all \
     && conda install -c anaconda libboost  \
     && conda install -c conda-forge ipywidgets \
@@ -128,6 +128,7 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
     && pip install --upgrade pip  \
     && pip install --no-cache-dir \
                       dcmstack \
+		      dicom2nifti \
                       ipy_table \
                       nibabel \
                       nipy \
@@ -155,6 +156,7 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
 
 EXPOSE 8888
 EXPOSE 8080
+EXPOSE 8081
 WORKDIR $HOME
 
 ############# ENV variables setup
